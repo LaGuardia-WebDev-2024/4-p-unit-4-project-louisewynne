@@ -1,13 +1,13 @@
 <!--Unit 4 Project
 Requirements
-[ ] Three Distinct CSS font-family Declarations
-[ ] One Google Font or Uploaded Font
-[ ] An Unordered **or** Ordered List (<ul> or <ol>)
-[ ] Three Images
+[ yes ] Three Distinct CSS font-family Declarations
+[ yes ] One Google Font or Uploaded Font
+[ yes ] An Unordered **or** Ordered List (<ul> or <ol>)
+[ yes ] Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Include :hover Effect 
-[ no ] Feature 2 - Change the <li> markers
+[ yes ] Feature 2 - Change the <li> markers
 [ no ] Feature 3 - Change the Favicon
 [ no ] Feature 4 - Include Hand Drawn Border
 [ no ] Feature 5 - Use background-blend-mode: overlay
@@ -19,52 +19,80 @@ Select ONE Additional Feature to Add
 <head>
   <title>Unit 4 Project</title>
   <meta charset="utf-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Meow+Script&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Ultra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Mansalva&family=Mea+Culpa&family=Ole&display=swap" rel="stylesheet">
+
   <style>
 
+    body {
+      margin-left: 300px;
+      margin-right: 300px;
+      background-image: https://www.brownstoner.com/wp-content/uploads/2018/06/brooklyn-architecture-windsor-terrace-715-greenwood-avenue-concrete-houses-3.jpg;
+    }
+
     h1{
-      font-family: "Ultra", serif;
+      font-family: "Ole", cursive;
       font-weight: 400;
       font-style: normal;
+      font-size: 60px;
     }
 
-    .images {
+    li::marker {
+      content: "⸙  ";
+      font-size: 1.4em;
+      color: black;
+    }
+
+    img {
       border: 3px dotted rgb(255, 121, 87);
       border-radius: 20px;
+      margin-left: 10px;
+      height: 200px;
     }
 
-#prospect-park-title {
+
+  .divider {
+     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+    #prospect-park-title {
       font-family: "Mansalva", sans-serif;
       font-weight: 400;
       font-style: normal;
     }
 
-    #morning {
-      font-family: "Meow Script", cursive;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 30px;
-    }
+   #le-paddock-title {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+   }
 
-    #evening {
-      font-family: "Quantico", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-    }
+   #nitehawk-cinema-title {
+    font-family: "Bruno Ace SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   }
 
   </style>
 </head>
 <body>
 
   <h1>Guide to Windsor Terrace, Brooklyn</h1>
-
+<div class="divider">
   <p>Windsor Terrace is a small-ish neighborhood in Brooklyn, above it is Park Slope and below it is Kennsington. To it's right is prospect park, and Greenwood Cemetary is on it's left. It's known for tree-lined streets, historic architecture, and strong sense of community.</p>
 
+  <img src="https://static01.nyt.com/images/2013/12/08/realestate/08LivingIn-map/08LivingIn-map-popup.png" alt="map showing windor terrace">
+</div>
+
   <h2 id="prospect-park-title">Prospect Park</h2>
-  <hr>
+  <hr> 
+
   <p>Prospect park is a fairly large and very beautiufl park. There are many things you can do there to occupy your time, here are some I like to do:</p>
+<div class="divider">
   <ul>
     <li>Have a picnic on one of the feilds</li>
     <li>Go on a walk through one of the many trails in the forrest</li>
@@ -75,17 +103,18 @@ Select ONE Additional Feature to Add
   <br>
 
   <img class="images" src="https://www.tclf.org/sites/default/files/styles/full_width/public/thumbnails/image/NY_Brooklyn_ProspectPark_BarrettDoherty_2020_002_sig.png?itok=RfOda6Cj" width="300" alt="lake in prospect park">
+</div>
 
-   <h2>Le Paddock</h2>
+   <h2 id="le-paddock-title">Le Paddock</h2>
   <hr>
   <p> Le Paddock is a really nice, delicious, restaurant with French cuisine and brick oven pizza. Everytime I've been the food has been really amazing.</p>
   <br>
 
-  <img class="images" src="https://lepaddockbrooklyn.com/wp-content/uploads/sb-instagram-feed-images/346244882_1621446048370745_6889277713978159317_nfull.jpg" width="200" alt="le paddock">
+  <img class="images" src="https://lepaddockbrooklyn.com/wp-content/uploads/sb-instagram-feed-images/346244882_1621446048370745_6889277713978159317_nfull.jpg"  alt="le paddock">
 
-  <img class="images" src="https://images.ctfassets.net/1aemqu6a6t65/57XQGUuHPhuDafRVxwoTCa/5c98c7ea4c52ab85f9a7270cc1777b29/Le-Paddock-Brooklyn-NYC-Courtesy-2.jpg" alt="french onion soup from le paddock" width="200">
+  <img class="images" src="https://images.ctfassets.net/1aemqu6a6t65/57XQGUuHPhuDafRVxwoTCa/5c98c7ea4c52ab85f9a7270cc1777b29/Le-Paddock-Brooklyn-NYC-Courtesy-2.jpg" alt="french onion soup from le paddock">
 
- <h2 >Movie Theater</h2>
+ <h2 id="nitehawk-cinema-title" >Nitehawk Cinema</h2>
   <hr>
   <p>Nitehawk Cinema is a really nnice, kind of expensive, movie theater. It serves food as you watch movies, which is where it can get kind of pricy. They show popular movies and indie movies, and sometimes older movies too which normally aren't back in theaters. </p>
   <br>
