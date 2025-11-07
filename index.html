@@ -9,8 +9,8 @@ Select ONE Additional Feature to Add
 [ no ] Feature 1 - Include :hover Effect 
 [ yes ] Feature 2 - Change the <li> markers
 [ no ] Feature 3 - Change the Favicon
-[ no ] Feature 4 - Include Hand Drawn Border
-[ no ] Feature 5 - Use background-blend-mode: overlay
+[ yes ] Feature 4 - Include Hand Drawn Border
+[ yes ] Feature 5 - Use background-blend-mode: overlay
 -->
 
 <!DOCTYPE html>
@@ -28,29 +28,52 @@ Select ONE Additional Feature to Add
     body {
       margin-left: 300px;
       margin-right: 300px;
-      background-image: https://www.brownstoner.com/wp-content/uploads/2018/06/brooklyn-architecture-windsor-terrace-715-greenwood-avenue-concrete-houses-3.jpg;
-    }
+      background-image: url("https://www.brownstoner.com/wp-content/uploads/2018/06/brooklyn-architecture-windsor-terrace-715-greenwood-avenue-concrete-houses-3.jpg?resize=1024,700");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: rgba(167, 230, 255, 0.685);
+      background-blend-mode: overlay;
+      } 
 
     h1{
       font-family: "Ole", cursive;
       font-weight: 400;
       font-style: normal;
       font-size: 60px;
+      color: rgb(255, 74, 43);
+      text-align: center;
+    }
+
+    p {
+      color: rgb(0, 46, 34);
+      font-size: 20px;
+      display: inline-block;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 225px;
+      padding: 1em;
+      line-height: 1.5em;
+      background: hsla(20, 95%, 80%, 0.8);
     }
 
     li::marker {
       content: "⸙  ";
       font-size: 1.4em;
-      color: black;
+      color: rgb(0, 46, 34);
     }
 
     img {
       border: 3px dotted rgb(255, 121, 87);
       border-radius: 20px;
       margin-left: 10px;
+      margin-right: 20px;
       height: 200px;
     }
 
+    hr {
+      border: none;
+      height: 2px;
+      background-color: rgb(255, 121, 87);
+    }
 
   .divider {
      display: flex;
@@ -58,10 +81,28 @@ Select ONE Additional Feature to Add
     align-items: flex-start;
   }
 
+  .nitehawk {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  #list {
+    color: rgb(0, 46, 34);
+      font-size: 20px;
+      display: inline-block;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 225px;
+      padding: 1em;
+      line-height: 1.5em;
+      background: hsla(20, 95%, 80%, 0.8);
+  }
+
     #prospect-park-title {
       font-family: "Mansalva", sans-serif;
       font-weight: 400;
       font-style: normal;
+      color: green;
+      text-align: center;
     }
 
    #le-paddock-title {
@@ -69,12 +110,17 @@ Select ONE Additional Feature to Add
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
+    color: rgb(253, 41, 12);
+    text-align: center;
    }
 
    #nitehawk-cinema-title {
     font-family: "Bruno Ace SC", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: rgb(255, 61, 61);
+    filter: drop-shadow(0px 0px 3px rgb(255, 0, 0));
+    text-align: center;
    }
 
   </style>
@@ -91,15 +137,17 @@ Select ONE Additional Feature to Add
   <h2 id="prospect-park-title">Prospect Park</h2>
   <hr> 
 
-  <p>Prospect park is a fairly large and very beautiufl park. There are many things you can do there to occupy your time, here are some I like to do:</p>
+  <p>Prospect park is a fairly large and very beautiufl park, it's west side is along Windsor Terrace. I grew up and still live across the street from it, so I know that there are many different things to do year round.</p>
 <div class="divider">
+  <div id="list">
   <ul>
-    <li>Have a picnic on one of the feilds</li>
+    <li>Have a picnic</li>
     <li>Go on a walk through one of the many trails in the forrest</li>
     <li>At LeFrac center, you can go ice skating in the winter/fall and roller skating in the summer/spring</li>
     <li>Go boating on the lake</li>
     <li>Go running or biking</li>
   </ul>
+  </div>
   <br>
 
   <img class="images" src="https://www.tclf.org/sites/default/files/styles/full_width/public/thumbnails/image/NY_Brooklyn_ProspectPark_BarrettDoherty_2020_002_sig.png?itok=RfOda6Cj" width="300" alt="lake in prospect park">
@@ -116,10 +164,14 @@ Select ONE Additional Feature to Add
 
  <h2 id="nitehawk-cinema-title" >Nitehawk Cinema</h2>
   <hr>
-  <p>Nitehawk Cinema is a really nnice, kind of expensive, movie theater. It serves food as you watch movies, which is where it can get kind of pricy. They show popular movies and indie movies, and sometimes older movies too which normally aren't back in theaters. </p>
-  <br>
+<div class="nitehawk">
 
   <img class="images" src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/3/2019/01/30160645/Nitehawk-Prospect-Park-1-1000x600.jpg" width="300" alt="Nitehawk cinema building">
+
+  <p>Nitehawk Cinema is a really nice movie theater. It serves food as you watch movies, which is where it can get kind of pricy. They show popular movies and indie movies, so theres almost always something good to see. </p>
+  <br>
+
+</div>
 
 </body>
 </html>
